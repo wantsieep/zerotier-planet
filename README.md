@@ -41,6 +41,16 @@ note: 如果未指定密码,可执行 docker exec -it ztncui cat /var/log/docker
 
 # 各客户端配置planet
 
+###MacOS 客户端配置
+
+步骤如下：
+
+进入 /Library/Application\ Support/ZeroTier/One/ 目录，并替换目录下的 planet 文件
+重启 ZeroTier-One：cat /Library/Application\ Support/ZeroTier/One/zerotier-one.pid | sudo xargs kill
+加入网络 zerotier-cli join 网络 id
+管理后台同意加入请求
+zerotier-cli peers 可以看到 planet 角色
+
 ### Windows 配置
 
 首先去zerotier官网下载一个zerotier客户端
